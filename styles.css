@@ -57,7 +57,6 @@ div {
 .text-content {
     flex: 2; /* Takes two-thirds of the container space */
     display: flex;
-    height: 100%;
     flex-direction: column;
     align-items: flex-start; /* Align text to the left */
     text-align: left;
@@ -98,6 +97,10 @@ button:hover {
     display: inline-flex; /* Use inline-flex to line items next to each other */
     align-items: center; /* Center items vertically */
     text-decoration: none;
+    background-color: #A3C1AD;
+    border: #D99CB3;
+    border-radius: 3px;
+    border-style: solid;
     color: #7A4B56; /* Rich Brown text */
     font-size: 1em; /* Relative to the surrounding text size */
     border-radius: 15px; /* Creates a round button */
@@ -116,13 +119,15 @@ button:hover {
     height: 3em; /* Height should be the same as width to maintain roundness */
     border-radius: 50%; /* Makes the icon round */
     object-fit: cover; /* Ensures the image covers the area without distortion */
-    margin-right: 15px; /* Space between the icon and the text */
+    margin-right: 2em; /* Space between the icon and the text */
+    margin-Left: 1.5em;/* Space between the icon and the Edge */
 }
 
 .social-text {
     display: flex; /* Use flex to align text perfectly */
     align-items: center; /* Center text vertically relative to the icon */
     font-size: 1.5em;
+    font-weight: bolder;
 }
 
 /* Add hover effect for the buttons */
