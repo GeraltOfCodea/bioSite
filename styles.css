@@ -66,11 +66,11 @@ div {
 
 .profile-photo {
     flex: 1; /* Takes up one-third of the container space */
-    max-width: 90%;
     border-radius: 15px; /* Soft rounded corners */
     overflow: hidden;
     box-shadow: 0 8px 24px 0 #FCBCE0;
     margin-left: 2em; /* Ensures some space between text and image */
+    background-color: #A3C1AD;
 }
 
 .profile-photo img {
