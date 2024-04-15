@@ -144,11 +144,6 @@ button:hover {
 
 /* Media query for wider screens */
 @media (min-width: 768px) {
-    .text-content {
-        flex-direction: row; /* Lay out the children in a row for wide screens */
-        align-items: flex-start; /* Align items to the top */
-        text-align: left;
-    }
 
     .profile-photo {
         width: 50%; /* Adjust the width for wide screens */
