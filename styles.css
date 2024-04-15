@@ -1,0 +1,102 @@
+/* Basic Font and Background Setup */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF5EA; /* Light Cream as the base background color */
+    color: #7A4B56; /* Rich Brown for the main text color */
+}
+
+/* Header Styles */
+header {
+    background-color: #FCBCE0; /* Soft Pink for the header background */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #7A4B56; /* Rich Brown for link color */
+}
+nav a:hover {
+    color: #A3C1AD; /* Muted Green for hover state */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #D99CB3; /* Darker Pink for the footer */
+    color: #FFF5EA; /* Light Cream for the footer text */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #7A4B56; /* Consistent Rich Brown for heading elements */
+}
+
+/* Div Styling */
+div {
+    background-color: #FFF5EA; /* Light Cream for div backgrounds */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* This will make the container take the full viewport height */
+    text-align: left;
+    background-color: #FFF5EA; /* Light Cream */
+}
+
+.text-content {
+    flex-basis: 66.66%; /* Takes up two-thirds of the container */
+    padding: 2em; /* Add some space inside the text container */
+}
+
+.profile-photo {
+    flex-basis: 33.33%; /* Takes up one-third of the container */
+    position: relative;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto; /* Keep the aspect ratio of the image */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text-content, .profile-photo {
+        flex-basis: 100%; /* Each takes full width on smaller screens */
+    }
+
+    .profile-photo img {
+        position: static; /* On small screens, the image is no longer absolutely positioned */
+    }
+}
+
+button {
+    background-color: #FCBCE0; /* Soft Pink */
+    color: #7A4B56; /* Rich Brown */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #D99CB3; /* Darker Pink */
+}
