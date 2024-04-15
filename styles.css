@@ -68,13 +68,13 @@ div {
     overflow: hidden; /* Ensures the content respects border-radius */
     box-shadow: 0 4px 8px 0 #FCBCE0; /* Soft Pink shadow */
     align-self: flex-end; /* Align to the right inside the flex container */
+    max-height: 33%;
 }
 
 .profile-photo img {
     width: 100%;
     height: auto;
     display: block;
-    max-height: 33%;
 }
 
 button {
