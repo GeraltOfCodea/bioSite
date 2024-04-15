@@ -64,7 +64,7 @@ div {
 .profile-photo {
     /* Set the width and height to the desired size of the image */
     height: 33vh; /* Make it the same as the width to keep it circular */
-    border-radius: 33%; /* This will make the div round */
+    border-radius: 55%; /* This will make the div round */
     overflow: hidden; /* Ensures the image does not overflow the rounded div */
     box-shadow: 0 8px 24px 0 #FCBCE0; /* Soft Pink shadow for depth */
     align-self: center; /* Center within the flex container */
@@ -94,40 +94,44 @@ button:hover {
     background-color: #D99CB3; /* Darker Pink */
 }
 
+/* Social Links Styles */
+.social-links {
+    position: fixed;
+    bottom: 3em; /* Position above the footer */
+    left: 1em; /* Adjust if needed */
+    z-index: 10; /* Ensure it's above other content */
+}
+
 .social-button {
-    display: inline-flex; /* Use inline-flex to line items next to each other */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
+    display: inline-flex; /* Align items in a row */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
     text-decoration: none;
     color: #7A4B56; /* Rich Brown text */
-    font-size: 1em; /* Relative to the surrounding text size */
-    border-radius: 50%; /* Creates a round button */
-    overflow: hidden; /* Hide overflow to maintain border-radius */
-    width: 3em; /* Set a fixed size for the buttons */
-    height: 3em; /* Keep the height the same as the width for a circle */
-    margin: 0.5em; /* Add some margin around the buttons */
-    box-shadow: 2px 2px 5px #FCBCE0; /* Soft Pink shadow */
+    font-size: 16px; /* Adjust as needed */
+    border-radius: 50%; /* Full roundness */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height, same as width for a circle */
+    margin: 5px;
+    background-color: #FFF5EA; /* Light Cream */
+    box-shadow: 0 4px 8px 0 rgba(252, 188, 224, 0.7); /* Light pink shadow */
+    overflow: hidden; /* Hide overflow for border-radius */
 }
 
 .social-icon {
-    width: 100%; /* Full width of the parent .social-button */
-    height: 100%; /* Full height of the parent .social-button */
-    border-radius: 50%; /* Rounds the image */
-    object-fit: cover; /* Ensures the image covers the button area */
+    width: 100%; /* Full width of the button */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 50%; /* Ensures the image is also round */
+    object-fit: cover; /* Covers the button area, useful if the images are not square */
 }
 
-/* Ensure that the .social-links div is above the footer */
-.social-links {
-    position: fixed;
-    bottom: 3em; /* Adjust distance from the bottom */
-    left: 1em; /* Adjust distance from the left */
-    z-index: 1000; /* Higher than the footer */
-}
-
-/* Add hover effect for the buttons */
-.social-button:hover {
-    background-color: #FCBCE0; /* Soft Pink for hover */
-    border-color: #A3C1AD; /* Muted Green border on hover */
+.social-links a {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    box-shadow: none;
 }
 
 /* Responsive behavior */
