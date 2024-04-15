@@ -78,22 +78,6 @@ div {
     display: block;
 }
 
-
-/* Responsive behavior */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .text-content, .profile-photo {
-        flex-basis: 100%; /* Each takes full width on smaller screens */
-    }
-
-    .profile-photo img {
-        position: static; /* On small screens, the image is no longer absolutely positioned */
-    }
-}
-
 button {
     background-color: #FCBCE0; /* Soft Pink */
     color: #7A4B56; /* Rich Brown */
@@ -108,7 +92,57 @@ button:hover {
     background-color: #D99CB3; /* Darker Pink */
 }
 
+.social-links {
+    position: fixed;
+    top: 50%; /* Centers the block vertically */
+    right: 10px; /* Places the block on the right side; change to `left` if you prefer */
+    transform: translateY(-50%); /* Ensures vertical centering */
+    z-index: 1000; /* Ensures the links stay above other content */
+}
 
+.social-links a {
+    display: block; /* Stack the links vertically */
+    margin: 5px 0; /* Add some space between the links */
+}
+
+.social-links img {
+    width: 40px; /* Adjust the size of the icons as needed */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth transformation on hover */
+}
+
+.social-links img:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .text-content, .profile-photo {
+        flex-basis: 100%; /* Each takes full width on smaller screens */
+    }
+
+    .profile-photo img {
+        position: static; /* On small screens, the image is no longer absolutely positioned */
+    }
+    .social-links {
+        right: 5px; /* Less offset on smaller screens */
+        top: auto; /* Position the links from the bottom on smaller screens */
+        bottom: 10px;
+        transform: translateY(0);
+    }
+
+    .social-links a {
+        margin: 3px 0;
+    }
+
+    .social-links img {
+        width: 30px; /* Smaller icons on smaller screens */
+    }
+}
 
 /* Media query for wider screens */
 @media (min-width: 768px) {
@@ -123,3 +157,11 @@ button:hover {
         margin-top: 0; /* Reset the margin on top */
     }
 }
+
+
+
+
+
+
+
+
