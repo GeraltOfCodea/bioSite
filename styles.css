@@ -85,15 +85,8 @@ div {
         flex-direction: column;
     }
 
-    .text-content {
-        flex-direction: row; /* Lay out the children in a row for wide screens */
-        align-items: flex-start; /* Align items to the top */
-        text-align: left;
-    }
-
-    .profile-photo {
-        width: 50%; /* Adjust the width for wide screens */
-        margin-top: 0; /* Reset the margin on top */
+    .text-content, .profile-photo {
+        flex-basis: 100%; /* Each takes full width on smaller screens */
     }
 
     .profile-photo img {
@@ -115,3 +108,18 @@ button:hover {
     background-color: #D99CB3; /* Darker Pink */
 }
 
+
+
+/* Media query for wider screens */
+@media (min-width: 768px) {
+    .text-content {
+        flex-direction: row; /* Lay out the children in a row for wide screens */
+        align-items: flex-start; /* Align items to the top */
+        text-align: left;
+    }
+
+    .profile-photo {
+        width: 50%; /* Adjust the width for wide screens */
+        margin-top: 0; /* Reset the margin on top */
+    }
+}
