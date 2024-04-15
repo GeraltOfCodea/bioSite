@@ -1,0 +1,45 @@
+/* Basic Font and Background Setup */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFF5EA; /* Light Cream as the base background color */
+    color: #7A4B56; /* Rich Brown for the main text color */
+}
+
+/* Header Styles */
+header {
+    background-color: #FCBCE0; /* Soft Pink for the header background */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation Styles */
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #7A4B56; /* Rich Brown for link color */
+}
+nav a:hover {
+    color: #A3C1AD; /* Muted Green for hover state */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #D99CB3; /* Darker Pink for the footer */
+    color: #FFF5EA; /* Light Cream for the footer text */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #7A4B56; /* Consistent Rich Brown for heading elements */
+}
+
+/* Div Styling */
+div {
+    background-color: #FFF5EA; /* Light Cream for div backgrounds */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
