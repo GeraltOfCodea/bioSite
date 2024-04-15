@@ -74,6 +74,7 @@ div {
     width: 100%;
     height: auto;
     display: block;
+    max-height: 33%;
 }
 
 button {
