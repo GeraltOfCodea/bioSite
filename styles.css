@@ -92,25 +92,37 @@ button:hover {
 
 .social-links {
     position: fixed;
-    top: 50%; /* Centers the block vertically */
-    right: 10px; /* Places the block on the right side; change to `left` if you prefer */
-    transform: translateY(-50%); /* Ensures vertical centering */
+    top: 50%; /* Center the block vertically */
+    right: 10px; /* Place the block on the right side; change to `left` if you prefer */
+    transform: translateY(-50%); /* Ensure vertical centering */
     z-index: 1000; /* Ensures the links stay above other content */
 }
 
-.social-links a {
-    display: block; /* Stack the links vertically */
-    margin: 5px 0; /* Add some space between the links */
+.social-button {
+    display: flex;
+    align-items: center;
+    background-color: #FFF5EA; /* Light Cream background */
+    border: 1px solid #D99CB3; /* Darker Pink border */
+    border-radius: 50px; /* Rounded corners */
+    padding: 5px 10px;
+    margin: 10px 0; /* Space between buttons */
+    text-decoration: none; /* No underline */
+    color: #7A4B56; /* Rich Brown text */
+    font-size: 1em; /* Equal to the height of the surrounding text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-.social-links img {
-    width: 40px; /* Adjust the size of the icons as needed */
-    height: auto;
-    transition: transform 0.3s ease; /* Smooth transformation on hover */
+.social-icon {
+    width: auto; /* Keep the original aspect ratio */
+    height: 1em; /* Match the height of the surrounding text */
+    border-radius: 50%; /* Make the image round */
+    margin-right: 5px; /* Space between the icon and the text */
 }
 
-.social-links img:hover {
-    transform: scale(1.1); /* Slightly enlarge icons on hover */
+/* Add hover effect for the buttons */
+.social-button:hover {
+    background-color: #FCBCE0; /* Soft Pink for hover */
+    border-color: #A3C1AD; /* Muted Green border on hover */
 }
 
 /* Responsive behavior */
@@ -131,14 +143,6 @@ button:hover {
         top: auto; /* Position the links from the bottom on smaller screens */
         bottom: 10px;
         transform: translateY(0);
-    }
-
-    .social-links a {
-        margin: 3px 0;
-    }
-
-    .social-links img {
-        width: 30px; /* Smaller icons on smaller screens */
     }
 }
 
