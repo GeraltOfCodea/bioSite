@@ -62,19 +62,22 @@ div {
 }
 
 .profile-photo {
-    width: 80%; 
-    margin-top: 2em; /* Space above the image */
-    border-radius: 67%; /* Makes the image round-ish */
-    overflow: hidden; /* Ensures the content respects border-radius */
-    box-shadow: 0 4px 8px 0 #FCBCE0; /* Soft Pink shadow */
-    align-self: flex-end; /* Align to the right inside the flex container */
-    max-height: 33%;
+    /* Set the width and height to the desired size of the image */
+    height: 33vh; /* Make it the same as the width to keep it circular */
+    border-radius: 33%; /* This will make the div round */
+    overflow: hidden; /* Ensures the image does not overflow the rounded div */
+    box-shadow: 0 8px 24px 0 #FCBCE0; /* Soft Pink shadow for depth */
+    align-self: center; /* Center within the flex container */
+    margin-left: auto; /* Pushes the image to the right inside the flex container */
+    margin-right: 2em; /* Space from the right edge */
 }
 
 .profile-photo img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* This will cover the entire area of the div */
     display: block;
+    border-radius: 50%; /* Ensuring the image itself also gets rounded if needed */
 }
 
 button {
@@ -91,33 +94,34 @@ button:hover {
     background-color: #D99CB3; /* Darker Pink */
 }
 
-.social-links {
-    position: fixed;
-    top: 50%; /* Center the block vertically */
-    right: 10px; /* Place the block on the right side; change to `left` if you prefer */
-    transform: translateY(-50%); /* Ensure vertical centering */
-    z-index: 1000; /* Ensures the links stay above other content */
-}
-
 .social-button {
-    display: flex;
-    align-items: center;
-    background-color: #FFF5EA; /* Light Cream background */
-    border: 1px solid #D99CB3; /* Darker Pink border */
-    border-radius: 50px; /* Rounded corners */
-    padding: 5px 10px;
-    margin: 10px 0; /* Space between buttons */
-    text-decoration: none; /* No underline */
+    display: inline-flex; /* Use inline-flex to line items next to each other */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-decoration: none;
     color: #7A4B56; /* Rich Brown text */
-    font-size: 1em; /* Equal to the height of the surrounding text */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-size: 1em; /* Relative to the surrounding text size */
+    border-radius: 50%; /* Creates a round button */
+    overflow: hidden; /* Hide overflow to maintain border-radius */
+    width: 3em; /* Set a fixed size for the buttons */
+    height: 3em; /* Keep the height the same as the width for a circle */
+    margin: 0.5em; /* Add some margin around the buttons */
+    box-shadow: 2px 2px 5px #FCBCE0; /* Soft Pink shadow */
 }
 
 .social-icon {
-    width: auto; /* Keep the original aspect ratio */
-    height: 1em; /* Match the height of the surrounding text */
-    border-radius: 50%; /* Make the image round */
-    margin-right: 5px; /* Space between the icon and the text */
+    width: 100%; /* Full width of the parent .social-button */
+    height: 100%; /* Full height of the parent .social-button */
+    border-radius: 50%; /* Rounds the image */
+    object-fit: cover; /* Ensures the image covers the button area */
+}
+
+/* Ensure that the .social-links div is above the footer */
+.social-links {
+    position: fixed;
+    bottom: 3em; /* Adjust distance from the bottom */
+    left: 1em; /* Adjust distance from the left */
+    z-index: 1000; /* Higher than the footer */
 }
 
 /* Add hover effect for the buttons */
@@ -155,11 +159,3 @@ button:hover {
         margin-top: 0; /* Reset the margin on top */
     }
 }
-
-
-
-
-
-
-
-
