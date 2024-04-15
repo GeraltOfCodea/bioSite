@@ -46,38 +46,38 @@ div {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row; /* Horizontal stacking by default */
     align-items: center;
     justify-content: center;
-    height: 100vh; /* This will make the container take the full viewport height */
+    height: 100%;
     text-align: left;
-    background-color: #FFF5EA; /* Light Cream */
+    background-color: #FFF5EA;
 }
 
 .text-content {
+    flex: 2; /* Takes two-thirds of the container space */
     display: flex;
-    flex-direction: column; /* Stack elements vertically by default */
-    align-items: center; /* Center items for narrow screens */
-    text-align: center;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    text-align: left;
+    padding: 20px; /* Adds some padding around the text */
 }
 
 .profile-photo {
-    /* Set the width and height to the desired size of the image */
-    height: 33vh; /* Make it the same as the width to keep it circular */
-    border-radius: 55%; /* This will make the div round */
-    overflow: hidden; /* Ensures the image does not overflow the rounded div */
-    box-shadow: 0 8px 24px 0 #FCBCE0; /* Soft Pink shadow for depth */
-    align-self: center; /* Center within the flex container */
-    margin-left: auto; /* Pushes the image to the right inside the flex container */
-    margin-right: 2em; /* Space from the right edge */
+    flex: 1; /* Takes up one-third of the container space */
+    max-width: 90%;
+    border-radius: 15px; /* Soft rounded corners */
+    overflow: hidden;
+    box-shadow: 0 8px 24px 0 #FCBCE0;
+    margin-left: 2em; /* Ensures some space between text and image */
 }
 
 .profile-photo img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* This will cover the entire area of the div */
-    display: block;
-    border-radius: 50%; /* Ensuring the image itself also gets rounded if needed */
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area well */
+    border-radius: 15px; /* Same as the container if rounded corners are desired */
 }
 
 button {
@@ -94,54 +94,61 @@ button:hover {
     background-color: #D99CB3; /* Darker Pink */
 }
 
-/* Social Links Styles */
-.social-links {
-    position: fixed;
-    bottom: 3em; /* Position above the footer */
-    left: 1em; /* Adjust if needed */
-    z-index: 10; /* Ensure it's above other content */
-}
-
 .social-button {
-    display: inline-flex; /* Align items in a row */
-    align-items: center; /* Vertical alignment */
-    justify-content: center; /* Horizontal alignment */
+    display: inline-flex; /* Use inline-flex to line items next to each other */
+    align-items: center; /* Center items vertically */
     text-decoration: none;
     color: #7A4B56; /* Rich Brown text */
-    font-size: 16px; /* Adjust as needed */
-    border-radius: 50%; /* Full roundness */
-    width: 40px; /* Fixed width */
-    height: 40px; /* Fixed height, same as width for a circle */
-    margin: 5px;
-    background-color: #FFF5EA; /* Light Cream */
-    box-shadow: 0 4px 8px 0 rgba(252, 188, 224, 0.7); /* Light pink shadow */
-    overflow: hidden; /* Hide overflow for border-radius */
+    font-size: 1em; /* Relative to the surrounding text size */
+    border-radius: 15px; /* Creates a round button */
+    overflow: hidden; /* Hide overflow to maintain border-radius */
+    width: 25em; /* Set a fixed width for the buttons */
+    height: 5em; /* Fixed height to keep proportions */
+    margin: 0.5em; /* Add some margin around the buttons */
+    box-shadow: 2px 2px 5px #FCBCE0; /* Soft Pink shadow */
+    padding-left: 0.5em; /* Padding to the left of the button */
+    padding-right: 0.5em; /* Padding to the right of the button */
+    justify-content: flex-start; /* Align content to the left */
 }
 
 .social-icon {
-    width: 100%; /* Full width of the button */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-    border-radius: 50%; /* Ensures the image is also round */
-    object-fit: cover; /* Covers the button area, useful if the images are not square */
+    width: 3em; /* Width of the icon */
+    height: 3em; /* Height should be the same as width to maintain roundness */
+    border-radius: 50%; /* Makes the icon round */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-right: 15px; /* Space between the icon and the text */
 }
 
-.social-links a {
-    border: none;
-    padding: 0;
-    margin: 0;
-    background: none;
-    box-shadow: none;
+.social-text {
+    display: flex; /* Use flex to align text perfectly */
+    align-items: center; /* Center text vertically relative to the icon */
+    font-size: 1.5em;
+}
+
+/* Add hover effect for the buttons */
+.social-button:hover {
+    background-color: #FCBCE0; /* Soft Pink for hover */
+    border-color: #A3C1AD; /* Muted Green border on hover */
 }
 
 /* Responsive behavior */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stacks elements vertically */
+        height: auto; /* Adjust height for mobile */
     }
 
-    .text-content, .profile-photo {
-        flex-basis: 100%; /* Each takes full width on smaller screens */
+    .text-content {
+        align-items: center; /* Center text on mobile */
+        text-align: center;
+        order: 2; /* Ensures text-content appears below the image */
+    }
+
+    .profile-photo {
+        order: 1; /* Ensures image appears on top */
+        max-width: 80vw; /* Adjust image width for smaller screens */
+        max-height: auto; /* Adjust image height based on width */
+        margin: 0 auto 20px; /* Center image and add space below */
     }
 
     .profile-photo img {
