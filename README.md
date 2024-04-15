@@ -1,2 +1,7 @@
-# bioSite
-bioSite for CSD340, Bellevue University, Spring 2024
+# CSD 340 Web Development with HTML and CSS
+
+## Contributors
+
+- Sue Sampson
+- Ryan Norrbom
+
