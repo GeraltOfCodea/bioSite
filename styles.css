@@ -152,7 +152,6 @@ button:hover {
     .profile-photo {
         order: 1; /* Ensures image appears on top */
         max-width: 80vw; /* Adjust image width for smaller screens */
-        max-height: auto; /* Adjust image height based on width */
         margin: 0 auto 20px; /* Center image and add space below */
     }
 
