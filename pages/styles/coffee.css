@@ -1,0 +1,50 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.content-block .content, .content-block img {
+    flex: 1 1 48%; /* Adjust the flex-basis as necessary */
+    margin: 10px;
+}
+
+.content-block.right-img .content {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.content-block img {
+    width: 100%; /* Makes the image responsive */
+    max-width: 500px; /* Limits the image width to 500px */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 15px;
+    align-self: center
+}
+
+
+@media (max-width: 1132px) {
+    .content-block {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content-block .content, .content-block img {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .content-block.right-img .content {
+        order: 1; /* Reset order for small screens */
+        text-align: center;
+    }
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Brandy's Site</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./pages/styles/parallaxcard.css">
 </head>
 <body>
     <header>
@@ -14,20 +15,57 @@
             <a href="index.html">Home</a>
             <a href="./pages/about.html">About</a>
             <a href="./pages/hobbies.html">Hobbies</a>
-            <a href="./pages/coffee.html">Coffee</a>
+            <a href="./pages/coffee.html">Sip & Graze</a>
         </nav>
     </header>
     <div class="container">
         <div class="profile-photo">
             <img src="./images/profile.png" alt="Brandy's Profile Photo">
         </div>
-        <div class="text-content">
+        <div class="text-content" style="box-shadow: none;">
             <h1>Get to Know Brandy</h1>
             <p>Welcome to a website dedicated to Brandy! This site will showcase some of Brandy's interests, hobbies, and links to her social accounts.</p>
            
             <form style="display: inline" action="./pages/about.html" method="get">
                 <button>Learn More About Brandy</button>
             </form>
+        </div>
+    </div>
+    <div>
+        <div class="card-content">
+            <p></p>
+            <a href="./pages/coffee.html" class="card">
+            <div class="front" style="background-image: url(./images/bananacoffee.png);">
+                <p>Coffee</p>
+            </div>
+            <div class="back">
+                <div>
+                <p>Coffee and Nutrients</p>
+                <p>Learn about Brandy's favorite coffee stops.</p><button class="button">Click Here</button>
+                </div>
+            </div>
+            </a><a href="./pages/hobbies.html" class="card">
+            <div class="front" style="background-image: url(./images/tillabread.png);">
+                <p>Hobbies</p>
+            </div>
+            <div class="back">
+                <div>
+                <p>Bread, Art, and all things Travel </p>
+                <p>Get a taste of a day in the life of Brandy.</p><button class="button">Click Here</button>
+                </div>
+            </div>
+            </a>
+            </a><a href="./pages/about.html" class="card">
+                <div class="front" style="background-image: url(./images/brandypeace.png);">
+                <p>About</p>
+                </div>
+                <div class="back">
+                <div>
+                    <p>Career and Style </p>
+                    <p>Learn more about Brandy!</p><button class="button">Click Here</button>
+                </div>
+                </div>
+            </a>
         </div>
     </div>
     <footer>

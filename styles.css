@@ -52,14 +52,17 @@ div {
     height: 100%;
     text-align: left;
     background-color: #FFF5EA;
+    align-items: flex-start;
+    flex-shrink: 1;
 }
 
 .text-content {
-    flex: 2; /* Takes two-thirds of the container space */
+    flex: 3; 
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align text to the left */
     text-align: left;
+    justify-content: center;
     padding: 20px; /* Adds some padding around the text */
 }
 
@@ -105,8 +108,8 @@ button:hover {
     font-size: 1em; /* Relative to the surrounding text size */
     border-radius: 15px; /* Creates a round button */
     overflow: hidden; /* Hide overflow to maintain border-radius */
-    width: 25em; /* Set a fixed width for the buttons */
-    height: 5em; /* Fixed height to keep proportions */
+    width: 20em; /* Set a fixed width for the buttons */
+    height: 4em; /* Fixed height to keep proportions */
     margin: 0.5em; /* Add some margin around the buttons */
     box-shadow: 2px 2px 5px #FCBCE0; /* Soft Pink shadow */
     padding-left: 0.5em; /* Padding to the left of the button */
@@ -117,7 +120,6 @@ button:hover {
 .social-icon {
     width: 3em; /* Width of the icon */
     height: 3em; /* Height should be the same as width to maintain roundness */
-    border-radius: 50%; /* Makes the icon round */
     object-fit: cover; /* Ensures the image covers the area without distortion */
     margin-right: 2em; /* Space between the icon and the text */
     margin-Left: 1.5em;/* Space between the icon and the Edge */
@@ -134,6 +136,14 @@ button:hover {
 .social-button:hover {
     background-color: #FCBCE0; /* Soft Pink for hover */
     border-color: #A3C1AD; /* Muted Green border on hover */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: none;
 }
 
 /* Responsive behavior */
